@@ -1,0 +1,58 @@
+<!-- src/login/login.html -->
+<!--<div class="login jumbotron center-block">
+    <h1>Login</h1>
+    <form role="form" (submit)="login($event, username.value, password.value)">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" #username class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" #password class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <a href="/signup">Click here to Signup</a>
+    </form>
+</div>-->
+
+<form role="form" name="loginForm">
+    <!-- $event, -->
+    <div class="row">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-4">
+            <h2 class="form-login-heading">Login</h2>
+            <input type="text" class="form-control" placeholder="Username" #username id="username" required autofocus>
+            <input type="password" class="form-control" placeholder="Password" id="password" #password required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" data-ng-model="loginData.useRefreshTokens"><strong> Use Refresh Tokens</strong>
+                </label>
+            </div>
+            <!--<a class="btn btn-primary btn-lg" role="button" (click)="logout()">Login</a>-->
+            <button class="btn btn-md btn-info btn-block mdl-js-button mdl-button--raised mdl-js-ripple-effect
+      mdl-button--accent" type="submit" (click)="login($event, username.value, password.value)">Login</button>
+            <!-- v-busy="isBusy" v-busy-label="please wait ..." v-pressable -->
+            <div data-ng-hide="message == ''" class="alert alert-danger">
+                <h3 *ngIf="response">{{response}}</h3>
+                {{message}}
+            </div>
+            <div>
+                <a href="#/forgotpassword">Forgot Password</a><br />
+                <a href="/signup">Click here to Signup</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2 class="form-login-heading">Social Logins</h2>
+            <p>Or you can login using one of the social logins bleow</p>
+            <button class="btn btn-large btn-facebook btn-block" type="button" data-ng-click="authExternalProvider('Facebook')"><i class="fa fa-facebook"></i> | Connect with Facebook</button>
+            <button class="btn btn-large btn-twitter btn-block" type="button" data-ng-click="authExternalProvider('Twitter')"><i class="fa fa-twitter"></i> | Connect with Twitter</button>
+            <!--<button class="btn btn-large btn-microsoft btn-block" type="button" data-ng-click="authExternalProvider('Facebook')"><i class="fa fa-microsoft"></i> | Connect with Microsoft</button>-->
+            <button class="btn btn-large btn-google-plus btn-block" type="button" data-ng-click="authExternalProvider('Google')"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </div>
+</form>

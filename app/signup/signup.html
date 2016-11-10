@@ -1,0 +1,17 @@
+﻿<br/>
+<br/>
+<form class="form-login" role="form" name="regForm">
+    <h2 class="form-login-heading">Sign up</h2>
+    <input type="text" class="form-control" placeholder="Email" #Email id="Email" required autofocus>
+    <input type="text" class="form-control" placeholder="First Name" #firstName id="firstName" required autofocus>
+    <input type="text" class="form-control" placeholder="Last Name" #lastName id="lastName" required autofocus>
+    <input type="password" class="form-control" placeholder="Password" #password id="password" required>
+    <input type="password" class="form-control" placeholder="Confirm Password" #cPassword id="cPassword" required>
+    <!--<input type="text" class="form-control" placeholder="Referral Email" data-ng-model="registration.refEmail" required> -->
+    <button class="btn btn-md btn-info btn-block mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" (click)="signup($event, Email.value, firstName.value, lastName.value, password.value)">Submit</button>
+
+    <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+        {{message}}
+    </div>
+    <a href="/login">Click here to Login</a>
+</form>
