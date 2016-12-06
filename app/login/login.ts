@@ -3,11 +3,14 @@ import { Router, RouterLink } from '@angular/router';
 //import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
 import { Http, Headers, RequestOptions, Response, URLSearchParams  } from '@angular/http';
 import { contentHeaders, wwwHeader } from '../common/headers';
+import {OPTIONS_TEMPLATE} from '../common/options-template';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import {Subscription} from 'rxjs';
 import { Observable } from 'rxjs/Rx';
 import { AuthHttp } from 'angular2-jwt';
+import {BUSY_CONFIG_DEFAULTS, IBusyConfig} from 'angular2-busy';
 
 //let styles   = require('./login.css');
 //let template = require('./login.html');
@@ -29,10 +32,20 @@ export class Login {
 //private url: string = 'http://jabolaniapi.azurewebsites.net/api/oauth/token';
 private url: string = 'http://vboards.azurewebsites.net/token';
 response: string;
+//@Input() loading: IBusyConfig;
+//busy:Promise<any>;
+//busy:Subscription;
+ idata: IBusyConfig = Object.assign({}, BUSY_CONFIG_DEFAULTS);
+ this.idata.backdrop=false;
+     this.idata.message='Please wait ...';
+     this.idata.template='<div style="background-size: 72px;"><div style="margin-top: 110px; text-align: center; font-size: 18px; font-weight: 700;">{{message}}</div></div>';
+     this.idata.minDuration=600;
 //event: Event, 
   login(event: Event,username: string, password: string) {
     //alert('welcome');
      
+     
+    // , message: 'Loading...', backdrop: false, delay: 200, minDuration: 600
 
     event.preventDefault();
     let urlSearchParams = new URLSearchParams();
@@ -45,7 +58,7 @@ response: string;
     //this.http.post('http://localhost:3001/sessions/create', body, { headers: contentHeaders })
     console.log(body);
     //this.http.post('http://localhost:8036/api/api/oauth/token', data, { headers: wwwHeader })
-    this.http.post(this.url, data, { headers: headers })
+    this.idata.busy =this.http.post(this.url, data, { headers: headers })
       .subscribe(
         response => {
           localStorage.setItem('access', response.json());

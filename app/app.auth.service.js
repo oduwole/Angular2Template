@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var angular2_jwt_1 = require("angular2-jwt");
-var router_1 = require("@angular/router");
-var app_auth_config_1 = require("./app.auth.config");
+var core_1 = require('@angular/core');
+var angular2_jwt_1 = require('angular2-jwt');
+var router_1 = require('@angular/router');
+var app_auth_config_1 = require('./app.auth.config');
 var Auth = (function () {
     function Auth(router) {
         var _this = this;
@@ -65,12 +65,12 @@ var Auth = (function () {
         this.router.navigate(['']);
     };
     ;
+    Auth = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [router_1.Router])
+    ], Auth);
     return Auth;
 }());
-Auth = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [router_1.Router])
-], Auth);
 exports.Auth = Auth;
 ;
 //# sourceMappingURL=app.auth.service.js.map

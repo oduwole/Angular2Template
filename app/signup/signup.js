@@ -8,11 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 //import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
-var http_1 = require("@angular/http");
-var headers_1 = require("../common/headers");
+var http_1 = require('@angular/http');
+var headers_1 = require('../common/headers');
 //const styles   = require('./signup.css');
 //const template = require('./signup.html');
 var Signup = (function () {
@@ -40,18 +40,18 @@ var Signup = (function () {
         event.preventDefault();
         //this.router.navigate(['/login']);
     };
+    Signup = __decorate([
+        core_1.Component({
+            selector: 'signup',
+            //directives: [ CORE_DIRECTIVES, FORM_DIRECTIVES ],
+            //template: template,
+            templateUrl: 'app/signup/signup.html',
+            styleUrls: ['app/content/css/site.css', 'app/content/css/social-buttons.css'],
+        }),
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [router_1.Router, http_1.Http])
+    ], Signup);
     return Signup;
 }());
-Signup = __decorate([
-    core_1.Component({
-        selector: 'signup',
-        //directives: [ CORE_DIRECTIVES, FORM_DIRECTIVES ],
-        //template: template,
-        templateUrl: 'app/signup/signup.html',
-        styleUrls: ['app/content/css/site.css', 'app/content/css/social-buttons.css'],
-    }),
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [router_1.Router, http_1.Http])
-], Signup);
 exports.Signup = Signup;
 //# sourceMappingURL=SignUp.js.map

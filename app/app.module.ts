@@ -4,6 +4,7 @@ import { RouterModule }   from '@angular/router';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule, JsonpModule} from "@angular/http"; //, Http 
 //import {APP_BASE_HREF} from '@angular/common';
+import {BusyModule,BusyConfig} from 'angular2-busy';
 
 
 
@@ -36,6 +37,18 @@ import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt'
     HttpModule,
     JsonpModule,
     FormsModule,
+    BusyModule.forRoot(
+            new BusyConfig({
+                message: 'Don\'t panic!',
+                backdrop: false,
+                template: `
+                    <div>{{message}}</div>
+                `,
+                delay: 200,
+                minDuration: 600,
+                wrapperClass: 'my-class'
+            })
+        ),
     RouterModule.forRoot([
   { path: 'login', component: Login, data: {
           title: 'Login'

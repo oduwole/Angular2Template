@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var toast_service_1 = require("./toast.service");
+var core_1 = require('@angular/core');
+var toast_service_1 = require('./toast.service');
 var ToastComponent = (function () {
     function ToastComponent(toastService) {
         this._defaults = {
@@ -40,15 +40,15 @@ var ToastComponent = (function () {
         this._toastElement.style.opacity = 0;
         window.setTimeout(function () { return _this._toastElement.style.zIndex = 0; }, 400);
     };
+    ToastComponent = __decorate([
+        core_1.Component({
+            selector: 'toast',
+            templateUrl: 'app/blocks/toast/toast.component.html',
+            styleUrls: ['app/blocks/toast/toast.component.css']
+        }), 
+        __metadata('design:paramtypes', [toast_service_1.ToastService])
+    ], ToastComponent);
     return ToastComponent;
 }());
-ToastComponent = __decorate([
-    core_1.Component({
-        selector: 'toast',
-        templateUrl: 'app/blocks/toast/toast.component.html',
-        styleUrls: ['app/blocks/toast/toast.component.css']
-    }),
-    __metadata("design:paramtypes", [toast_service_1.ToastService])
-], ToastComponent);
 exports.ToastComponent = ToastComponent;
 //# sourceMappingURL=toast.component.js.map

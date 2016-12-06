@@ -30,7 +30,7 @@ export class AppComponent {
     var j=new Date().toISOString();
     var d2=Date.parse(j);
     //return tokenNotExpired('access_token');
-    console.log(d>d2);
+    //console.log(d>d2);
     return d > d2; //date.isBefore(new Date());
   }
   login(){

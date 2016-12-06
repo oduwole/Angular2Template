@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var Rx_1 = require("rxjs/Rx");
+var core_1 = require('@angular/core');
+var Rx_1 = require('rxjs/Rx');
 var SpinnerService = (function () {
     function SpinnerService() {
         this._spinnerSubject = new Rx_1.Subject();
@@ -21,11 +21,11 @@ var SpinnerService = (function () {
     SpinnerService.prototype.hide = function () {
         this._spinnerSubject.next({ show: false });
     };
+    SpinnerService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], SpinnerService);
     return SpinnerService;
 }());
-SpinnerService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [])
-], SpinnerService);
 exports.SpinnerService = SpinnerService;
 //# sourceMappingURL=spinner.service.js.map

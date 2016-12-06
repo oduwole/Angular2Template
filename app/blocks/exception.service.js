@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var Rx_1 = require("rxjs/Rx");
-var toast_service_1 = require("./toast/toast.service");
+var core_1 = require('@angular/core');
+var Rx_1 = require('rxjs/Rx');
+var toast_service_1 = require('./toast/toast.service');
 var ExceptionService = (function () {
     function ExceptionService(_toastService) {
         var _this = this;
@@ -26,11 +26,11 @@ var ExceptionService = (function () {
             return Rx_1.Observable.of();
         };
     }
+    ExceptionService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [toast_service_1.ToastService])
+    ], ExceptionService);
     return ExceptionService;
 }());
-ExceptionService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [toast_service_1.ToastService])
-], ExceptionService);
 exports.ExceptionService = ExceptionService;
 //# sourceMappingURL=exception.service.js.map

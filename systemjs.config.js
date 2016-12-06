@@ -27,7 +27,13 @@
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
             "angular2-jwt": "npm:angular2-jwt/angular2-jwt.js",
-            'moment': 'npm:moment/min'
+            'moment': 'npm:moment/min',
+            'core-js':'npm:core-js',
+            //'ts-metadata-helper': 'npm:ts-metadata-helper',
+            'ts-metadata-helper': 'npm:angular2-busy/node_modules/ts-metadata-helper',
+            'angular2-dynamic-component': 'npm:angular2-busy/node_modules/angular2-dynamic-component',
+            //'angular2-dynamic-component': 'npm:angular2-dynamic-component',
+            'angular2-busy': 'npm:angular2-busy'
                 //'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
                 //"angular2-jwt": "node_modules/angular2-jwt",
         },
@@ -47,7 +53,18 @@
             'moment': {
                 main: 'moment.min.js',
                 defaultExtension: 'js'
-            }
+            },
+            'ts-metadata-helper': {
+                defaultExtension: 'js'
+            },
+            'angular2-dynamic-component': {
+                defaultExtension: 'js'
+            },
+            'angular2-busy': {
+                main: './index.js',
+                defaultExtension: 'js'
+            },
+            'core-js': { defaultExtension: 'js' }
         }
     });
 })(this);

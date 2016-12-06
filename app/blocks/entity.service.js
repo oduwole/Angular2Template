@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var EntityService = (function () {
     function EntityService() {
         this.clone = function (source) { return Object.assign({}, source); };
@@ -21,11 +21,11 @@ var EntityService = (function () {
         };
         this.propertiesDiffer = function (entityA, entityB) { return Object.keys(entityA).find(function (key) { return entityA[key] !== entityB[key]; }); };
     }
+    EntityService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], EntityService);
     return EntityService;
 }());
-EntityService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [])
-], EntityService);
 exports.EntityService = EntityService;
 //# sourceMappingURL=entity.service.js.map

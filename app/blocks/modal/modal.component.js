@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var modal_service_1 = require("./modal.service");
+var core_1 = require('@angular/core');
+var modal_service_1 = require('./modal.service');
 var KEY_ESC = 27;
 var ModalComponent = (function () {
     function ModalComponent(modalService) {
@@ -76,15 +76,15 @@ var ModalComponent = (function () {
         this._modalElement.style.opacity = 0;
         window.setTimeout(function () { return _this._modalElement.style.zIndex = 0; }, 400);
     };
+    ModalComponent = __decorate([
+        core_1.Component({
+            selector: 'modal-confirm',
+            templateUrl: 'app/blocks/modal/modal.component.html',
+            styleUrls: ['app/blocks/modal/modal.component.css']
+        }), 
+        __metadata('design:paramtypes', [modal_service_1.ModalService])
+    ], ModalComponent);
     return ModalComponent;
 }());
-ModalComponent = __decorate([
-    core_1.Component({
-        selector: 'modal-confirm',
-        templateUrl: 'app/blocks/modal/modal.component.html',
-        styleUrls: ['app/blocks/modal/modal.component.css']
-    }),
-    __metadata("design:paramtypes", [modal_service_1.ModalService])
-], ModalComponent);
 exports.ModalComponent = ModalComponent;
 //# sourceMappingURL=modal.component.js.map

@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
     //constructor(
     //private _messageService: MessageService,
@@ -31,7 +31,7 @@ var AppComponent = (function () {
         var j = new Date().toISOString();
         var d2 = Date.parse(j);
         //return tokenNotExpired('access_token');
-        console.log(d > d2);
+        //console.log(d>d2);
         return d > d2; //date.isBefore(new Date());
     };
     AppComponent.prototype.login = function () {
@@ -48,15 +48,15 @@ var AppComponent = (function () {
         //this.userProfile = undefined;
         this.router.navigate(['']);
     };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app',
+            templateUrl: 'app/app.components.html',
+            styleUrls: ['app/app.component.css']
+        }), 
+        __metadata('design:paramtypes', [router_1.Router])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.components.html',
-        styleUrls: ['app/app.component.css']
-    }),
-    __metadata("design:paramtypes", [router_1.Router])
-], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.components.js.map

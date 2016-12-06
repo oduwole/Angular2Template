@@ -8,11 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 //import { CORE_DIRECTIVES } from '@angular/common';
-var http_1 = require("@angular/http");
-var router_1 = require("@angular/router");
-var angular2_jwt_1 = require("angular2-jwt");
+var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
+var angular2_jwt_1 = require('angular2-jwt');
 //let styles = require('./home.css');
 //let template = require('./home.html');
 var Home = (function () {
@@ -69,17 +69,17 @@ var Home = (function () {
                 .subscribe(function (response) { return _this.response = response.text(); }, function (error) { return _this.response = error.text(); });
         }
     };
+    Home = __decorate([
+        core_1.Component({
+            selector: 'home',
+            // directives: [CORE_DIRECTIVES],
+            // Here we specify the template we'll use
+            templateUrl: 'app/home/home.html',
+            styleUrls: ['app/content/css/site.css', 'app/content/css/social-buttons.css']
+        }), 
+        __metadata('design:paramtypes', [router_1.Router, http_1.Http, angular2_jwt_1.AuthHttp])
+    ], Home);
     return Home;
 }());
-Home = __decorate([
-    core_1.Component({
-        selector: 'home',
-        // directives: [CORE_DIRECTIVES],
-        // Here we specify the template we'll use
-        templateUrl: 'app/home/home.html',
-        styleUrls: ['app/content/css/site.css', 'app/content/css/social-buttons.css']
-    }),
-    __metadata("design:paramtypes", [router_1.Router, http_1.Http, angular2_jwt_1.AuthHttp])
-], Home);
 exports.Home = Home;
 //# sourceMappingURL=Home.js.map

@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var spinner_service_1 = require("./spinner.service");
+var core_1 = require('@angular/core');
+var spinner_service_1 = require('./spinner.service');
 var ACTIVE_CLASS = 'is-active';
 var SpinnerComponent = (function () {
     function SpinnerComponent(_spinnerService) {
@@ -24,15 +24,15 @@ var SpinnerComponent = (function () {
     SpinnerComponent.prototype.ngOnDestroy = function () {
         this._spinnerStateChanged.unsubscribe();
     };
+    SpinnerComponent = __decorate([
+        core_1.Component({
+            selector: 'story-spinner',
+            template: "\n    <div\n      class=\"spinner mdl-spinner mdl-js-spinner mdl-spinner--single-color\"\n      [class.is-active]=\"visible\"></div>\n  ",
+            styles: [".spinner {position: absolute;left: 46%;top: 12%"]
+        }), 
+        __metadata('design:paramtypes', [spinner_service_1.SpinnerService])
+    ], SpinnerComponent);
     return SpinnerComponent;
 }());
-SpinnerComponent = __decorate([
-    core_1.Component({
-        selector: 'story-spinner',
-        template: "\n    <div\n      class=\"spinner mdl-spinner mdl-js-spinner mdl-spinner--single-color\"\n      [class.is-active]=\"visible\"></div>\n  ",
-        styles: [".spinner {position: absolute;left: 46%;top: 12%"]
-    }),
-    __metadata("design:paramtypes", [spinner_service_1.SpinnerService])
-], SpinnerComponent);
 exports.SpinnerComponent = SpinnerComponent;
 //# sourceMappingURL=spinner.component.js.map
