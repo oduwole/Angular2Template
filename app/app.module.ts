@@ -23,6 +23,7 @@ import { CONFIG, MessageService } from './shared/shared';
 import { EntityService, ExceptionService, ModalComponent, ModalService, SpinnerComponent, SpinnerService, ToastComponent, ToastService } from './blocks/blocks';
 //import { AuthHttp, AuthConfig, AUTH_PROVIDERS } from 'angular2-jwt';
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //@NgModule({
   //imports:      [ BrowserModule ],
@@ -37,6 +38,7 @@ import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt'
     HttpModule,
     JsonpModule,
     FormsModule,
+    NgbModule,
     BusyModule.forRoot(
             new BusyConfig({
                 message: 'Don\'t panic!',

@@ -22,6 +22,7 @@ var SignUp_1 = require('./signup/SignUp');
 var Home_1 = require('./home/Home');
 //import { AuthHttp, AuthConfig, AUTH_PROVIDERS } from 'angular2-jwt';
 var angular2_jwt_1 = require('angular2-jwt');
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 //@NgModule({
 //imports:      [ BrowserModule ],
 //declarations: [ AppComponent ],
@@ -38,6 +39,7 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 http_1.JsonpModule,
                 forms_1.FormsModule,
+                ng_bootstrap_1.NgbModule,
                 angular2_busy_1.BusyModule.forRoot(new angular2_busy_1.BusyConfig({
                     message: 'Don\'t panic!',
                     backdrop: false,

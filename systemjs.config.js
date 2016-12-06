@@ -33,7 +33,8 @@
             'ts-metadata-helper': 'npm:angular2-busy/node_modules/ts-metadata-helper',
             'angular2-dynamic-component': 'npm:angular2-busy/node_modules/angular2-dynamic-component',
             //'angular2-dynamic-component': 'npm:angular2-dynamic-component',
-            'angular2-busy': 'npm:angular2-busy'
+            'angular2-busy': 'npm:angular2-busy',
+            '@ng-bootstrap/ng-bootstrap': 'npm:@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
                 //'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
                 //"angular2-jwt": "node_modules/angular2-jwt",
         },
