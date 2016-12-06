@@ -36,10 +36,10 @@ response: string;
 //busy:Promise<any>;
 //busy:Subscription;
  idata: IBusyConfig = Object.assign({}, BUSY_CONFIG_DEFAULTS);
- this.idata.backdrop=false;
-     this.idata.message='Please wait ...';
-     this.idata.template='<div style="background-size: 72px;"><div style="margin-top: 110px; text-align: center; font-size: 18px; font-weight: 700;">{{message}}</div></div>';
-     this.idata.minDuration=600;
+ //idata.backdrop=false;
+   //  this.idata.message='Please wait ...';
+     //this.idata.template='<div style="background-size: 72px;"><div style="margin-top: 110px; text-align: center; font-size: 18px; font-weight: 700;">{{message}}</div></div>';
+     //this.idata.minDuration=600;
 //event: Event, 
   login(event: Event,username: string, password: string) {
     //alert('welcome');
